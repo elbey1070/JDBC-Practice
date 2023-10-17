@@ -40,6 +40,7 @@ public class Execute01 {
         System.out.println("sql3:"+sql3);
 
         //5-ADIM:bağlantıyı ve statement kapatma
+
         st.close();
         connection.close();
 

@@ -62,6 +62,26 @@ public class ExecuteQuery01 {
 
         //ÖRNEK 4:Puanı bölümlerin taban puanlarının ortalamasından yüksek olan öğrencilerin isim ve puanlarını listeleyiniz.ÖDEVVV
 
+        ResultSet rs4= st.executeQuery("SELECT isim, puan FROM ogrenciler WHERE puan>(SELECT AVG(taban_puani) FROM bolumler)");
+        while (rs4.next()){
+            System.out.println(rs4.getString("isim")+"--"+rs4.getInt("puan"));
+        }
+
+        //ÖRNEK5:bolumler tablosunda taban puanı en yüksek 2. bölümün ismini ve puanını yazdırınız.
+
+        System.out.println("------------------ÖRNEK 5------------------------");
+
+
+        //ÖRNEK5:bolumler tablosunda taban puanı en yüksek 2. bölümün ismini ve puanını yazdırınız.
+        String query5="SELECT bolum,taban_puani FROM bolumler WHERE taban_puani=" +
+                "(SELECT MAX(taban_puani) FROM bolumler " +
+                "WHERE taban_puani<(SELECT MAX(taban_puani) FROM bolumler))";
+        ResultSet rs5= st.executeQuery(query5);
+        while (rs5.next()){
+            System.out.println(rs5.getString("bolum")+"---"+rs5.getInt("taban_puani"));
+        }
+
+
         st.close();
         con.close();
 
