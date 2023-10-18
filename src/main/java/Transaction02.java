@@ -43,6 +43,5 @@ public class Transaction02 {
             prst.close();
             con.close();
         }
-
     }
 }
