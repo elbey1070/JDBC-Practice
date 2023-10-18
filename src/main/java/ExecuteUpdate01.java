@@ -46,8 +46,14 @@ public class ExecuteUpdate01 {
             System.out.println(rs3.getString("name")+"----"+rs3.getInt("id"));
         }
 
+        int silenenSayi =st.executeUpdate("Delete From it_persons WHERE id=11");
+        System.out.println("silenenSayi = " + silenenSayi);
 
+        ResultSet rs77 = st.executeQuery("SELECT * FROM it_persons");
 
+        while (rs77.next()){
+            System.out.println(rs77.getString("name")+"-----"+rs77.getInt("it"));
+        }
 
 
         st.close();
