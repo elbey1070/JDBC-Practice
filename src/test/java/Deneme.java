@@ -49,8 +49,7 @@ import java.util.List;
             Assert.assertTrue(actualData.contains("Germany") && actualData.contains("Denmark"));
             Assert.assertTrue(actualData.containsAll(someData));
 
-            // Close connection
-            JdbcLocalDBUtils.closeConnection();
+
 
         }
     }
