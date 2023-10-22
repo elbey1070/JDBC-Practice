@@ -3,6 +3,9 @@ import org.junit.Test;
 import utils.JdbcMedunnaDBUtils;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import static utils.JdbcLocalDBUtils.closeConnection;
+
 public class MedunnaTest {
     /*
     Given
@@ -48,5 +51,6 @@ public class MedunnaTest {
         Assert.assertTrue(resultSet.getBoolean("status"));
         Assert.assertEquals(5000.00, resultSet.getDouble("price"), 0.01);
         Assert.assertEquals("B189 - Krallara layık oda", resultSet.getString("description"));
+        closeConnection();
     }
 }
