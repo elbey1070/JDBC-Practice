@@ -33,6 +33,11 @@ public class JunitTest {
 
     }
 
+    @Test
+    public void test06() {
+        int sayi =6;
 
+        Assert.assertEquals(sayi,6);
 
+    }
 }

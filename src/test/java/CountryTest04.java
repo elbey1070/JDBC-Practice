@@ -49,7 +49,6 @@ public class CountryTest04 {
             toplamRegion++;
         }
         Assert.assertEquals(17,toplamRegion);
-
         closeConnection();
     }
 }

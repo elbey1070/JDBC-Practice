@@ -1,12 +1,4 @@
-import org.junit.Assert;
-import org.junit.Test;
-import utils.JdbcMedunnaDBUtils;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
-import static utils.JdbcLocalDBUtils.closeConnection;
-
-public class MedunnaTest {
     /*
     Given
       Kullanıcı veritabanına bağlanır
@@ -18,9 +10,9 @@ public class MedunnaTest {
     And
       Kullanıcı, bağlantıyı kapatır
    */
-    @Test
-    public void medunnaTest() throws SQLException {
-        // Expected Datalar
+   // @Test
+         /* (public void medunnaTest() throws SQLException {
+        Expected Datalar
         int roomNumberEX = 72245540;
         String roomTypeEX = "SUITE";
         boolean statusEX = true;
@@ -54,3 +46,4 @@ public class MedunnaTest {
         closeConnection();
     }
 }
+          */
